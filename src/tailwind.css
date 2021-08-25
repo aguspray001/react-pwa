@@ -17,7 +17,7 @@
 /* card */
 
 .card .card-shadow {
-  @apply transition duration-300 shadow-none h-full;
+  @apply transition duration-300 shadow-lg h-full;
 }
 
 .card:hover .card-shadow {
@@ -44,7 +44,7 @@
 
 .overlay .video {
   @apply absolute transform bg-blue-200 bg-no-repeat bg-center w-20 h-20 rounded-full items-center justify-center flex -translate-x-1/2 -translate-y-1/2;
-  background-image: url("./images/content/icon-play.svg#icon-play");
+  background-image: url("/home/agus/BELAJAR/PROJECT/SOFTWARE ENG/bwa/react-pwa/src/images/content/icon-play.svg");
   top: 50%;
   left: 50%;
 }
