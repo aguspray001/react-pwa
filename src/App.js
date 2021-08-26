@@ -10,6 +10,7 @@ import Hero from "./components/Hero";
 import Offline from "./components/Offline";
 import Profile from "./pages/Profile";
 import Splash from "./pages/Splash";
+import Detail from "./pages/Detail";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -60,7 +61,7 @@ function App() {
   return (
     <>
       {offlineStatus && <Offline />}
-      <Header />
+      <Header mode="ligth"/>
       <Hero />
       <Browse />
       <Arrived items={items} />
@@ -76,6 +77,7 @@ export default function Routes() {
     <Router>
       <Route  path="/" exact component={App} />
       <Route  path="/profile" exact component={Profile} />
+      <Route path="/details/:id" component={Detail} />
     </Router>
   )
 };

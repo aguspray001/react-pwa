@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ArrivedItems = ({ image, title, price }) => {
+const ArrivedItems = ({ item }) => {
   
     const numberFormat = (data) => {
       const currency = Intl.NumberFormat("id-ID", {
@@ -32,14 +33,14 @@ const ArrivedItems = ({ image, title, price }) => {
           </div>
         </div>
         <img
-          src={image}
+          src={item.image}
           alt=""
           className="w-full h-full object-cover object-center"
         />
       </div>
-      <h5 className="text-lg font-semibold mt-4">{title}</h5>
-      <span className="">{numberFormat(price)}</span>
-      <a href="#details.html" className="stretched-link"></a>
+      <h5 className="text-lg font-semibold mt-4">{item.title}</h5>
+      <span className="">{numberFormat(item.price)}</span>
+      <Link to={{pathname:`/details/${item.id}`, state:item}} className="stretched-link"></Link>
     </div>
   );
 };

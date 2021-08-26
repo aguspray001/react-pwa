@@ -18,7 +18,7 @@ const Arrived = ({items}) => {
           <div className="flex -mx-4 flex-row relative">
             {items?.map((item, key)=>{
               return (
-                <ArrivedItems key={key} image={item.image1} price={item.price} title={item.name} />
+                <ArrivedItems key={key} item={item}/>
               )
             })}
           </div>

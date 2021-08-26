@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({mode}) => {
   return (
-    <header className="absolute w-full z-50 px-4">
+    <header className={`${mode === "light" ? 'absolute' : ''} w-full z-50 px-4`}>
       <div className="container mx-auto py-5">
         <div className="flex flex-stretch items-center">
           <div className="w-56 items-center flex">
@@ -19,22 +19,22 @@ const Header = () => {
               id="menu"
             >
               <li className="mx-3 py-6 md:py-0">
-                <a href="#" className="text-black md:text-white hover:underline">
+                <Link to="/" className="text-black md:text-black hover:underline">
                   Showcase
-                </a>
+                </Link>
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <a href="#" className="text-black md:text-white hover:underline">
+                <Link to="/" className="text-black md:text-black hover:underline">
                   Catalog
-                </a>
+                </Link>
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <a href="#" className="text-black md:text-white hover:underline">
+                <Link to="/" className="text-black md:text-black hover:underline">
                   Delivery
-                </a>
+                </Link>
               </li>
               <li className="mx-3 py-6 md:py-0">
-                <Link to="/profile" className="text-black md:text-white hover:underline">
+                <Link to="/profile" className="text-black md:text-black hover:underline">
                   Profile
                 </Link>
               </li>
