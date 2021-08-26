@@ -18,7 +18,7 @@ const Profile = () => {
     return outputArray;
   }
 
-  const subscribe = () => {
+  const subscribe = async () => {
     const key =
       "BO9-7bFcjGR50xjM-FdJYZ6ZKsNXk70W-rSOcFtJ2V0ctRAAnXUvUXUCKzmSEx9REu1rDmlosjK5OzeqvR0wNPE";
     try {

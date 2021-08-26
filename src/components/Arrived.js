@@ -16,7 +16,7 @@ const Arrived = ({items}) => {
         <div className="container mx-auto"></div>
         <div className="overflow-hidden z-10">
           <div className="flex -mx-4 flex-row relative">
-            {items.map((item, key)=>{
+            {items?.map((item, key)=>{
               return (
                 <ArrivedItems key={key} image={item.image1} price={item.price} title={item.name} />
               )
