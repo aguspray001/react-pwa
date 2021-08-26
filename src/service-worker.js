@@ -104,6 +104,15 @@ registerRoute(
   })
 );
 
+
+self.addEventListener("push", function(e){
+  e.waitUntil(
+    self.registration.showNotification("LuxSpace", {
+      icon:"./icon-120.png",
+      body: e.data.text()
+    })
+  )
+})
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener("message", (event) => {
