@@ -11,6 +11,7 @@ import Offline from "./components/Offline";
 import Profile from "./pages/Profile";
 import Splash from "./pages/Splash";
 import Detail from "./pages/Detail";
+import Cart from "./pages/Cart";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -77,6 +78,7 @@ export default function Routes() {
     <Router>
       <Route  path="/" exact component={App} />
       <Route  path="/profile" exact component={Profile} />
+      <Route  path="/cart" exact component={Cart} />
       <Route path="/details/:id" component={Detail} />
     </Router>
   )
